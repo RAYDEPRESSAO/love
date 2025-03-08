@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="tittle">Para está mulher incrível:</h1>
+
+    <img class="imagem" id="imagem" src="images/ana1.jpg" alt="Imagem" />
+    <p class="text">Clique aqui 👇</p>
+    <a href="segunda.html" class="contact-envelope">
+      <div class="envelope">
+        <div class="envelope-back"></div>
+        <div class="message"></div>
+        <div class="envelope-front"></div>
+      </div>
+      <div class="shadow"></div>
+    </a>
+    <script>
+      var imagens = [
+        "images/ana1.jpg",
+        "images/ana5.jpg",
+        "images/ana3.jpg",
+        "images/ana6.jpg",
+        "images/ana7.jpg",
+        "images/ana8.jpg",
+      ];
+
+      var indice = 0;
+      var imgElement = document.getElementById("imagem");
+
+      function alternarImagens() {
+        indice = (indice + 1) % imagens.length; // Cicla pelas imagens
+        imgElement.src = imagens[indice];
+      }
+
+      // Altera a imagem a cada 3 segundos
+      setInterval(alternarImagens, 100);
+    </script>
+  </body>
+</html>

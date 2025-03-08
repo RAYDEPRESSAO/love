@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+body {
+  background-color: #b7b1f2;
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.text {
+  font-size: 40px;
+  color: #ffff;
+}
+.tittle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-right: 0.5em;
+  color: #ffff;
+}
+
+.imagem {
+  width: 80%; /* A largura da imagem será 100% do contêiner */
+  max-width: 600px; /* A largura máxima será 600px */
+  height: 300px; /* Altura fixa */
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner mantendo a proporção */
+  border: 2px solid #000;
+}
+body {
+  gap: 30px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-envelope {
+  position: relative;
+  border-radius: 50%;
+  background-color: #fdb7ea;
+  width: 200px;
+  height: 200px;
+  text-decoration: none; /* Remove o sublinhado do link */
+  z-index: 1; /* Garantir que o link tenha prioridade de camada */
+}
+
+.envelope {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  animation: bounce 1s ease infinite;
+}
+
+.envelope-back {
+  position: absolute;
+  background-color: #e19605;
+  width: 110px;
+  height: 70px;
+  top: 80px;
+  z-index: 1;
+}
+
+.envelope-back:before {
+  content: "";
+  position: absolute;
+  background-color: #fbf3b9;
+  border-radius: 10px;
+  width: 84px;
+  height: 84px;
+  top: -39px;
+  left: 13px;
+  transform: rotate(-45deg);
+}
+
+.message {
+  position: absolute;
+  z-index: 2;
+  background-color: #ffdccc;
+  width: 90px;
+  height: 95px;
+}
+
+.message:before {
+  content: "";
+  position: absolute;
+  background-color: #ced4da;
+  width: 75px;
+  height: 3px;
+  left: 7.5px;
+  top: 12px;
+  box-shadow: 0 10px #ced4da, 0 20px #ced4da, 0 30px #ced4da, 0 40px #ced4da,
+    0 50px #ced4da, 0 60px #ced4da, 0 70px #ced4da;
+}
+
+.envelope-front:before,
+.envelope-front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+}
+
+.envelope-front {
+  border-right: 60px solid #fbf3b9;
+  z-index: 3;
+  left: 95px;
+  top: 80px;
+}
+
+.envelope-front:before {
+  content: "";
+  border-left: 60px solid #fbf3b9;
+  left: -50px;
+  top: -35px;
+}
+
+.envelope-front:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 45px solid #fbf3b9;
+  border-left: 55px solid transparent;
+  border-right: 55px solid transparent;
+  left: -50px;
+  top: -10px;
+}
+
+.shadow {
+  position: absolute;
+  width: 110px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  top: 145px;
+  left: 45px;
+  z-index: -2;
+  animation: scale 1s linear infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-55px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  58% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  65% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleX(1);
+  }
+  10% {
+    transform: scaleX(1);
+  }
+  30% {
+    transform: scaleX(0.5);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  58% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.98);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.carta {
+  border: solid 1px;
+  width: 100%;
+  height: 900px;
+  background-color: #fbf3b9;
+}
+.linha_texto {
+  font-size: 20px;
+  padding: 1em;
+}
+.ilove {
+  text-align: center;
+  font-size: 50px;
+}
+.heart {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
